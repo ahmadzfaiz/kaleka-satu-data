@@ -19,7 +19,7 @@ class KBJI(models.Model):
     subgolongan = models.CharField(max_length=100, verbose_name='Nama Sub-Golongan', help_text='Tulisan akan otomatis terkonversi menjadi huruf kapital.')
     kode_jabatan = models.DecimalField(max_digits=6, decimal_places=2, unique=True, verbose_name='Kode Jabatan')
     jabatan = models.CharField(max_length=100, verbose_name='Nama Jabatan', help_text='Tulisan akan otomatis terkonversi menjadi huruf kapital.')
-    dasar_hukum = models.CharField(max_length=30)
+    dasar_hukum = models.CharField(max_length=120)
     status_data = models.CharField(max_length=11, verbose_name='Status Data', choices=[('Updated', 'Updated'), ('Depreciated', 'Depreciated')])
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

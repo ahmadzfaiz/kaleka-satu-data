@@ -6,4 +6,5 @@ from .dataset.keluarga import *
 from .dataset.kodepos import *
 from .dataset.orang import *
 from .dataset.profesi import *
+from .dataset.sitc import *
 from .dataset.testing import *
