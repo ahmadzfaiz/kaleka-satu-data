@@ -30,7 +30,8 @@ class SITC(models.Model):
 class SITCModel(admin.ModelAdmin):
     search_fields = ('deskripsi_section', 'deskripsi_division', 'deskripsi_group', 'deskripsi_subgroup', 'deskripsi_heading')
     list_filter = ('kode_section', 'kode_division', 'kode_group', 'kode_subgroup', 'kode_heading', 'dasar_hukum', 'status_data', 'created_at', 'updated_at', 'user')
-    list_display = ('kode_section', 'kode_division', 'kode_group', 'kode_subgroup', 'kode_heading', 'status_data', 'updated_at', 'user')
+    list_display = ('id', 'kode_section', 'kode_division', 'kode_group', 'kode_subgroup', 'kode_heading', 'status_data', 'updated_at', 'user')
+    ordering = ('kode_heading',)
     fieldsets = [
         ('Section', {'fields': ('kode_section', 'deskripsi_section')}),
         ('Division', {'fields': ('kode_division', 'deskripsi_division')}),

@@ -1,4 +1,4 @@
-# REGISTER DATASET KE SINI -- agar bisa dibaca di Admin Page
+# REGISTER DATASET KE SINI -- agar bisa dibaca di User Permission
 from .dataset.alamat import *
 from .dataset.anggota_keluarga import *
 from .dataset.kbji import *

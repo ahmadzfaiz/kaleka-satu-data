@@ -36,6 +36,7 @@ class Alamat(models.Model):
 @admin.register(Alamat)
 class AlamatModel(admin.ModelAdmin):
     search_fields = ('nama_prov', 'nama_kabkot', 'nama_kec', 'nama_desa')
+    ordering = ('kode_desa',)
     list_filter = ('kode_prov', 'nama_prov', 
         'kode_kabkot', 'nama_kabkot', 
         'kode_kec', 'nama_kec',
