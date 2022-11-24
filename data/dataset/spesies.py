@@ -9,6 +9,8 @@ class Spesies(models.Model):
         verbose_name_plural = 'Klasifikasi Baku Spesies'
 
     id = models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True)
+    nama_indonesia = models.CharField(max_length=50, blank=True)
+    nama_inggris = models.CharField(max_length=50, blank=True)
     kingdom = models.CharField(max_length=50)
     phylum = models.CharField(max_length=50)
     Class = models.CharField(max_length=50)
@@ -27,9 +29,9 @@ class Spesies(models.Model):
 
 @admin.register(Spesies)
 class SpesiesModel(admin.ModelAdmin):
-    search_fields = ('kingdom', 'phylum', 'Class', 'order', 'family', 'genus', 'species')
-    list_filter = ('kingdom', 'phylum', 'Class', 'order', 'family', 'genus', 'species', 'dasar_hukum', 'status_data', 'created_at', 'updated_at', 'user')
-    list_display = ('id', 'kingdom', 'phylum', 'Class', 'order', 'family', 'genus', 'species', 'status_data', 'updated_at', 'user')
+    search_fields = ('nama_indonesia', 'nama_inggris', 'kingdom', 'phylum', 'Class', 'order', 'family', 'genus', 'species')
+    list_filter = ('nama_indonesia', 'nama_inggris', 'kingdom', 'phylum', 'Class', 'order', 'family', 'genus', 'species', 'dasar_hukum', 'status_data', 'created_at', 'updated_at', 'user')
+    list_display = ('id', 'nama_indonesia', 'kingdom', 'phylum', 'Class', 'order', 'family', 'genus', 'species', 'status_data', 'updated_at', 'user')
     readonly_fields = ('user',)
 
     def save_model(self, request, obj, form, change): 
