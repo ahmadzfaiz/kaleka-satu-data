@@ -46,6 +46,9 @@ class IUCNModel(admin.ModelAdmin):
     raw_id_fields = ('spesies',)
     readonly_fields = ('user',)
 
+    # Decrease pagination for performance in Django Admin
+    list_per_page = 25
+
     def save_model(self, request, obj, form, change): 
         obj.user = request.user
         obj.save()

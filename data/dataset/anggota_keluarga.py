@@ -26,6 +26,9 @@ class AnggotaKeluargaModel(admin.ModelAdmin):
     raw_id_fields = ('orang', 'keluarga')
     readonly_fields = ('user',)
 
+    # Decrease pagination for performance in Django Admin
+    list_per_page = 25
+
     def save_model(self, request, obj, form, change): 
         obj.user = request.user
         obj.save()

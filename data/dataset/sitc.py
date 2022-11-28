@@ -41,6 +41,9 @@ class SITCModel(admin.ModelAdmin):
         ('Metadata', {'fields': ('dasar_hukum', 'status_data')})
     ]
 
+    # Decrease pagination for performance in Django Admin
+    list_per_page = 25
+
     def save_model(self, request, obj, form, change): 
         obj.user = request.user
         obj.save()
