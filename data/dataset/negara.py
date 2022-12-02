@@ -26,6 +26,8 @@ class Negara(models.Model):
     subregion = models.CharField(
         max_length= 30, 
         choices=[
+            ('Antarctica', 'Antarctica'),
+            ('Australia and New Zealand', 'Australia and New Zealand'),
             ('Caribbean', 'Caribbean'),
             ('Central America', 'Central America'),
             ('Central Asia', 'Central Asia'),
@@ -53,8 +55,6 @@ class Negara(models.Model):
         max_length= 30, 
         verbose_name='Region World Bank', 
         choices=[
-             ('Antarctica', 'Antarctica'),
-             ('Australia and New Zealand', 'Australia and New Zealand'),
              ('Antarctica', 'Antarctica'),
              ('East Asia & Pacific', 'East Asia & Pacific'),
              ('Europe & Central Asia', 'Europe & Central Asia'),
