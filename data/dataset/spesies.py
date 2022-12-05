@@ -17,7 +17,7 @@ class Spesies(models.Model):
     order = models.CharField(max_length=50)
     family = models.CharField(max_length=50)
     genus = models.CharField(max_length=50)
-    species = models.CharField(max_length=50)
+    species = models.CharField(max_length=100)
     dasar_hukum = models.CharField(max_length=60)
     status_data = models.CharField(max_length=11, verbose_name='Status Data', choices=[('Updated', 'Updated'), ('Depreciated', 'Depreciated')])
     created_at = models.DateTimeField(auto_now_add=True)
